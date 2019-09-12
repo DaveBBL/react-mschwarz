@@ -12,9 +12,11 @@ class App extends Component {
   }
 
   switchNameHandler = (newName) => {
-    //onsole.log("Was Clicked.");
+    // console.log("Was Clicked.");
+    // this.state.persons().name will call the function immediately
     // DON'T DO THIS this.state.persons[0].name = "David";
-    this.setState({persons: [
+    this.setState({
+      persons: [
         {name: newName, age: 61},
         {name: 'Sob', age: 60},
         {name: 'Misty', age: 188}
@@ -25,9 +27,9 @@ class App extends Component {
   nameChangedHandler = (event) => {
     this.setState({
       persons: [
-      {name: "Max", age: 26},
-      {name: event.target.value, age: 27},
-      {name: "Steph", age: 28}
+        {name: "Max", age: 26},
+        {name: event.target.value, age: 27},
+        {name: "Steph", age: 28}
       ]
     })
   }
